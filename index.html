@@ -1,0 +1,38 @@
+<html>
+
+<head>
+	<meta charset="utf-8">
+
+	<link rel="manifest" href="manifest.json">
+	<title>EXERCICIO 28/11</title>
+	<script>
+		if ('serviceWorker' in navigator ) {
+		  
+		  navigator.serviceWorker.register('service-worker.js', {
+			scope: './'
+		  }).then(function(registration) {
+			if (typeof registration.update == 'function') {
+			  registration.update();
+			}
+		  }).catch(function(e) {
+			console.error('Error during service worker registration:', e);
+		  });
+		  
+		}
+
+		localStorage.setItem("saude_fisica", "gordao");
+		localStorage.setItem("barba", "falhada");
+		localStorage.setItem("comida", "hamburgao");
+		localStorage.setItem("elo", "bronzao");
+		
+		  </script>
+
+</head>
+
+<body>
+
+
+
+</body>
+
+</html>
